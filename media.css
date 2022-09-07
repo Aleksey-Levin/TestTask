@@ -1,6 +1,6 @@
 @media screen and (max-width: 538px)  {
     body{
-        font-size: 5px;
+        font-size: 6px;
     }
     .content{
         flex-direction: column;
