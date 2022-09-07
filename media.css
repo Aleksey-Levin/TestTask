@@ -4,5 +4,6 @@
     }
     .content{
         flex-direction: column;
+        height: 60%;
     }
 }
