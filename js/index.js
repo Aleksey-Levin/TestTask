@@ -1,4 +1,5 @@
 import changeCircle from "./changeCircle.js";
+import {validate} from "./validate.js";
 
 let input = document.querySelector('.switch-input-text');
 let circularProgress = document.querySelector('.circular-progress');
@@ -9,16 +10,15 @@ let switchInputSecond = document.querySelector('.switch-input-second');
 let switchFirst = document.querySelector('.first-switch');
 let switchSecond = document.querySelector('.second-switch');
 
-input.value = 0;
 let progressCurrentValue = 0;
 
-input.addEventListener('keypress', InputKeyEnter);
+input.addEventListener('keyup', InputKeyEnter);
 switchInputFirst.addEventListener('click', EditAnimation);
 switchInputSecond.addEventListener('click', HideElement);
 
 
 function InputKeyEnter(e){
-    if (e.charCode === 13){
+    if (e.key === "Enter" && validate(input.value)){
         let newProgressValue = parseInt(input.value);
         input.readOnly = true;
         e.preventDefault();
@@ -30,7 +30,20 @@ function InputKeyEnter(e){
             input.readOnly = false;
             progressCurrentValue = newProgressValue;
         })
+        return;
     }
+
+    if (!validate(input.value)) {
+        input.classList.add('error-input');
+        console.log(1);
+        return;
+    }
+
+    if (input.classList.contains('error-input')) {
+        input.classList.remove('error-input');
+        return;
+    }
+
 }
 
 function EditAnimation(){

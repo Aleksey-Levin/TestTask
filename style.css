@@ -98,7 +98,7 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #eef2f5;
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -143,11 +143,13 @@ main {
     border: 0;
     font-size: 1.6em;
     font-weight: 500;
+    background-color: white;
+    outline: 0.1em black solid;
 }
 
 .switch-input-text:focus-visible {
     transition: 0s;
-    outline: 0.2em #0058f0 solid;
+    outline: 0.1em #0058f0 solid;
 }
 
 .switch-content{
@@ -159,7 +161,9 @@ main {
     font-size: 2em;
     font-weight: 600;
 }
-
+.error-input {
+    outline: 0.1em red solid !important;
+}
 @keyframes loading-spin {
     from {
         transform: rotate(0deg);
