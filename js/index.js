@@ -7,8 +7,6 @@ let circularProgress = document.querySelector('.circular-progress');
 let switchInputFirst = document.querySelector('.switch-input-first');
 let switchInputSecond = document.querySelector('.switch-input-second');
 
-let switchFirst = document.querySelector('.first-switch');
-let switchSecond = document.querySelector('.second-switch');
 
 let progressCurrentValue = 0;
 
