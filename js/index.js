@@ -35,7 +35,6 @@ function InputKeyEnter(e){
 
     if (!validate(input.value)) {
         input.classList.add('error-input');
-        console.log(1);
         return;
     }
 
