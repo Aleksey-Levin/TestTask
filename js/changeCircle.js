@@ -1,4 +1,5 @@
 export default function changeCircle(currentValue, newValue) {
+    const coefficientIncrease = 3.6;
     let circularProgress = document.querySelector('.circular-progress');
     let value = currentValue;
 
@@ -10,6 +11,6 @@ export default function changeCircle(currentValue, newValue) {
         if (value < newValue) value++;
         if (value > newValue) value--;
 
-        circularProgress.style.background = `conic-gradient(#0058f0 ${value * 3.6}deg, #eef2f5 0deg)`
+        circularProgress.style.background = `conic-gradient(#0058f0 ${value * coefficientIncrease}deg, #eef2f5 0deg)`
     }, 2);
 }

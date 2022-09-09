@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
+:root {
+    --active-switch-color: #0058f0;
+}
+
+
 * {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -35,7 +40,7 @@ main {
     position: relative;
     height: 25em;
     width: 25em;
-    background: conic-gradient(#0058f0 0deg, #eef2f5 0deg);
+    background: conic-gradient(var(--active-switch-color) 0deg, #eef2f5 0deg);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -116,11 +121,11 @@ main {
 }
 
 .switch-input:checked + .slider{
-    background-color: #0058f0 ;
+    background-color: var(--active-switch-color) ;
 }
 
 .switch-input:focus + .slider{
-    box-shadow: 0 0 0.1em #0058f0;
+    box-shadow: 0 0 0.1em var(--active-switch-color);
 }
 
 .switch-input:checked + .slider:before {
@@ -149,7 +154,7 @@ main {
 
 .switch-input-text:focus-visible {
     transition: 0s;
-    outline: 0.1em #0058f0 solid;
+    outline: 0.1em var(--active-switch-color) solid;
 }
 
 .switch-content{

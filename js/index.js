@@ -1,21 +1,21 @@
 import changeCircle from "./changeCircle.js";
-import {validate} from "./validate.js";
+import { validate } from "./validate.js";
 
 let input = document.querySelector('.switch-input-text');
 let circularProgress = document.querySelector('.circular-progress');
 
-let switchInputFirst = document.querySelector('.switch-input-first');
-let switchInputSecond = document.querySelector('.switch-input-second');
+let switchAnimation = document.querySelector('.switch-input-first');
+let switchHide = document.querySelector('.switch-input-second');
 
 
 let progressCurrentValue = 0;
 
 input.addEventListener('keyup', InputKeyEnter);
-switchInputFirst.addEventListener('click', EditAnimation);
-switchInputSecond.addEventListener('click', HideElement);
+switchAnimation.addEventListener('click', EditAnimation);
+switchHide.addEventListener('click', HideElement);
 
 
-function InputKeyEnter(e){
+let InputKeyEnter = (e) =>{
     if (e.key === "Enter" && validate(input.value)){
         let newProgressValue = parseInt(input.value);
         input.readOnly = true;
@@ -43,7 +43,7 @@ function InputKeyEnter(e){
 
 }
 
-function EditAnimation(){
+let EditAnimation = () =>{
     if(switchInputFirst.checked){
         circularProgress.classList.add('animate-spinner');
     }
@@ -51,7 +51,7 @@ function EditAnimation(){
         circularProgress.classList.remove('animate-spinner');
     }
 }
-function HideElement(){
+let HideElement = () =>{
     if(switchInputSecond.checked){
         circularProgress.classList.add('hide');
     }
