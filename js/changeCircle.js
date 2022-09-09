@@ -1,4 +1,5 @@
-export default function changeCircle(currentValue, newValue) {
+export default function changeCircle(currentValue, newValue) { // как я понял метод закрашивает круг, слово изменение оч абстрактное 
+    const someValue = 3.6; //переименуй потом, магические числа это плохо
     let circularProgress = document.querySelector('.circular-progress');
     let value = currentValue;
 
@@ -10,6 +11,6 @@ export default function changeCircle(currentValue, newValue) {
         if (value < newValue) value++;
         if (value > newValue) value--;
 
-        circularProgress.style.background = `conic-gradient(#0058f0 ${value * 3.6}deg, #eef2f5 0deg)`
+        circularProgress.style.background = `conic-gradient(#0058f0 ${value * someValue}deg, #eef2f5 0deg)`
     }, 2);
 }

@@ -1,11 +1,12 @@
 import changeCircle from "./changeCircle.js";
-import {validate} from "./validate.js";
+import { validate } from "./validate.js";
 
 let input = document.querySelector('.switch-input-text');
 let circularProgress = document.querySelector('.circular-progress');
 
-let switchInputFirst = document.querySelector('.switch-input-first');
-let switchInputSecond = document.querySelector('.switch-input-second');
+// нейминг - поменяй на что-то более внятное типа
+let switchInputFirst = document.querySelector('.switch-input-first'); // switchAnimation
+let switchInputSecond = document.querySelector('.switch-input-second'); // switchHide
 
 
 let progressCurrentValue = 0;
@@ -15,6 +16,7 @@ switchInputFirst.addEventListener('click', EditAnimation);
 switchInputSecond.addEventListener('click', HideElement);
 
 
+// поменяй все на arrow
 function InputKeyEnter(e){
     if (e.key === "Enter" && validate(input.value)){
         let newProgressValue = parseInt(input.value);
@@ -24,6 +26,7 @@ function InputKeyEnter(e){
         changeCircle(progressCurrentValue, newProgressValue);
         input.value = '';
 
+        // как будто ты можешь сделать changeCircle async и тут просто подождать.
         new Promise(resolve => setTimeout(resolve, 300)).then(()=>{
             input.readOnly = false;
             progressCurrentValue = newProgressValue;

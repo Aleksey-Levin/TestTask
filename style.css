@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
+// TODO: много раз используется белый и синий цвет,я бы вынес наверное их в отдельные переменные
+
 * {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -11,16 +13,19 @@ body{
     height: 100vh;
     font-size: 1vw;
 }
+
 main {
     padding: 50px;
     height: 100%;
 }
+
 .container_central{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
 }
+
 .content{
     width: 60%;
     background: white;
@@ -31,6 +36,7 @@ main {
     row-gap: 1.5em;
     margin: 0 auto;
 }
+
 .circular-progress{
     position: relative;
     height: 25em;
@@ -41,6 +47,7 @@ main {
     align-items: center;
     justify-content: center;
 }
+
 .animate-spinner{
     -webkit-animation:spin 1s linear forwards infinite;
     animation: loading-spin infinite 1s linear;
@@ -77,7 +84,6 @@ main {
     gap: 1.5em;
 }
 
-/* Switch */
 .switch {
     position: relative;
     display: inline-block;
@@ -156,14 +162,17 @@ main {
     display: flex;
     align-items: center;
 }
+
 .switch-text {
     padding-left: 2em;
     font-size: 2em;
     font-weight: 600;
 }
+
 .error-input {
     outline: 0.1em red solid !important;
 }
+
 @keyframes loading-spin {
     from {
         transform: rotate(0deg);
